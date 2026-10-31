@@ -1,0 +1,48 @@
+# 密钥与本地配置
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+tokens.json
+
+# 构建产物
+build/
+out/
+dist/
+release/
+bin/
+obj/
+*.exe
+*.msi
+*.dll
+
+# 依赖
+node_modules/
+package-lock.json.bak
+__pycache__/
+.venv/
+
+# 动画与形象资源（走 Release，不进 git）
+assets/clips/
+assets/packs/
+assets/figure/
+assets/**/*.webm
+assets/**/*.mp4
+assets/**/*.mov
+assets/**/*.webp
+
+# 运行时
+*.log
+*.db
+*.db-wal
+*.db-shm
+tts_cache/
+crashdumps/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
