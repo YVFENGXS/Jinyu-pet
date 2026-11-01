@@ -2,7 +2,7 @@
 
 本仓库**不保存协议正文**，唯一真源在服务端仓库：
 
-<https://github.com/YVFENGXS/Jinyu-memory/blob/main/docs/protocol/desktop-v1.md>
+<https://github.com/YVFENGXS/Jinyv-memory/blob/main/docs/protocol/desktop-v1.md>
 
 当前锁定版本：见 `VERSION`（`desktop-v1`）。
 
@@ -14,4 +14,4 @@
 
 样例报文（用于本地回放测试）：
 
-<https://github.com/YVFENGXS/Jinyu-memory/tree/main/tests/protocol_fixtures>
+<https://github.com/YVFENGXS/Jinyv-memory/tree/main/tests/protocol_fixtures>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>瑾瑜</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage">
+    <div id="scene"></div>
+
+    <div id="meal" class="hidden" aria-hidden="true">
+      <svg viewBox="0 0 240 190">
+        <defs>
+          <linearGradient id="bowlG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#d7e6fa"/>
+          </linearGradient>
+          <radialGradient id="riceG" cx="40%" cy="28%" r="72%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#e4edf9"/>
+          </radialGradient>
+        </defs>
+        <ellipse class="meal-shadow" cx="120" cy="174" rx="78" ry="9"/>
+        <g class="steam">
+          <path d="M92 54c-9-12 8-17 2-30"/>
+          <path d="M120 48c-9-12 8-17 2-30"/>
+          <path d="M148 54c-9-12 8-17 2-30"/>
+        </g>
+        <path class="bowl" d="M34 102h172c-4 38-32 66-86 66s-82-28-86-66Z" fill="url(#bowlG)" stroke="#a9c3e6" stroke-width="2"/>
+        <ellipse class="bowl-rim" cx="120" cy="102" rx="86" ry="18" fill="#f6faff" stroke="#a9c3e6" stroke-width="2"/>
+        <path class="bowl-wave" d="M48 112c16 11 32 11 48 0s32-11 48 0 32 11 48 0" fill="none" stroke="#bcd6f4" stroke-width="3" stroke-linecap="round"/>
+        <g class="rice">
+          <ellipse cx="120" cy="99" rx="58" ry="14" fill="url(#riceG)"/>
+          <circle cx="87" cy="90" r="14" fill="#fff"/>
+          <circle cx="106" cy="83" r="16" fill="#fff"/>
+          <circle cx="129" cy="85" r="15" fill="#fff"/>
+          <circle cx="150" cy="91" r="13" fill="#fff"/>
+          <circle cx="97" cy="99" r="10" fill="#fff"/>
+          <circle cx="120" cy="98" r="13" fill="#fff"/>
+          <circle cx="142" cy="99" r="10" fill="#fff"/>
+          <g fill="none" stroke="#d9e6f5" stroke-width="1.2" stroke-linecap="round">
+            <path d="M83 87q4-6 9-2"/><path d="M104 78q4-6 9-2"/><path d="M128 80q4-6 9-2"/>
+            <path d="M148 87q4-6 9-2"/><path d="M111 97q4-6 9-2"/><path d="M134 97q4-6 9-2"/>
+          </g>
+        </g>
+        <g class="spoon">
+          <g transform="rotate(44 120 100)">
+            <rect x="114" y="38" width="12" height="70" rx="6" fill="#e8c79a" stroke="#c49a63" stroke-width="1.6"/>
+            <ellipse cx="120" cy="108" rx="12" ry="15.5" fill="#f3ddb8" stroke="#c49a63" stroke-width="1.8"/>
+            <ellipse cx="119" cy="110" rx="6.5" ry="8.5" fill="#f8e8c9"/>
+            <circle cx="120" cy="104" r="5.5" fill="#fff"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div id="dots" class="hidden"><i></i><i></i><i></i></div>
+
+    <div id="bubble" class="hit hidden"><span id="bubble-text"></span><div class="tail"></div></div>
+
+    <div id="hint" class="hit hidden" title="和瑾瑜说话">…</div>
+
+    <div id="feed" class="hidden"><span id="feed-name"></span><em>松手就吃掉</em></div>
+
+    <div id="capsule" class="hit hidden">
+      <textarea id="input" rows="1" maxlength="500" placeholder="和瑾瑜说点什么…"></textarea>
+      <button id="send" title="发送">➤</button>
+    </div>
+
+    <div id="menu" class="hit hidden">
+      <button data-act="palette">换配色</button>
+      <button data-act="history">聊天记录</button>
+      <button data-act="server" id="menu-server">连接服务器</button>
+      <button data-act="quiet" id="menu-quiet">静音 / 勿扰</button>
+      <button data-act="hide">隐藏（Ctrl+Alt+J 召回）</button>
+      <button data-act="quit">退出</button>
+    </div>
+
+    <div id="history" class="hit hidden">
+      <div class="hist-head">
+        <span>和瑾瑜聊过的话</span>
+        <button id="hist-close" title="关闭">×</button>
+      </div>
+      <div id="hist-list" class="hist-list"></div>
+      <div id="hist-path" class="hist-path"></div>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+
+    <div id="error" class="hit hidden">
+      <div class="error-title">瑾瑜没能醒来</div>
+      <div id="error-text" class="error-text"></div>
+      <button id="error-quit">退出</button>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

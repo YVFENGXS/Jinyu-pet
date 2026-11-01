@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>rp-desktop-pet prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage">
+    <div id="bubble" class="hit hidden">
+      <span id="bubble-text"></span>
+      <div class="tail"></div>
+    </div>
+
+    <div id="dots" class="hidden"><i></i><i></i><i></i></div>
+
+    <div id="menu" class="hit hidden">
+      <button data-act="palette">换配色</button>
+      <button data-act="quiet" id="menu-quiet">静音 / 勿扰</button>
+      <button data-act="hide">隐藏（Ctrl+Alt+J 召回）</button>
+      <button data-act="quit">退出</button>
+    </div>
+
+    <div id="pet" class="hit" data-emotion="neutral">
+      <div id="hint" class="hit" title="和瑾瑜说话">…</div>
+      <div id="shadow"></div>
+      <svg id="whale" viewBox="0 0 220 160" width="220" height="160">
+        <g id="whale-g">
+          <path id="tail" d="M46 78 C 28 60, 10 58, 6 70 C 2 84, 20 96, 40 92 Z" />
+          <ellipse id="body" cx="112" cy="84" rx="70" ry="46" />
+          <ellipse id="belly" cx="110" cy="104" rx="46" ry="20" />
+          <path id="flipper" d="M96 104 C 86 122, 100 128, 110 112 Z" />
+          <g id="eye">
+            <circle id="eye-white" cx="140" cy="72" r="8" />
+            <circle id="pupil" cx="141" cy="73" r="4" />
+            <circle id="catch" cx="143" cy="71" r="1.4" />
+          </g>
+          <path id="mouth" d="M134 94 Q142 99 150 94" />
+          <ellipse id="blush" cx="153" cy="86" rx="8" ry="4.5" />
+          <path id="spout" d="M108 34 C 100 22, 92 26, 96 36 C 88 30, 82 38, 90 44" />
+        </g>
+      </svg>
+    </div>
+
+    <div id="capsule" class="hit hidden">
+      <textarea id="input" rows="1" maxlength="500" placeholder="和瑾瑜说点什么…"></textarea>
+      <div class="capsule-actions">
+        <button id="mic" title="按住说话（演示未实现）">🎤</button>
+        <button id="send" title="发送">➤</button>
+      </div>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
