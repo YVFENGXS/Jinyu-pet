@@ -82,6 +82,15 @@ Jinyu-pet/
 - 协议变更流程：服务端仓库改正文与 fixtures → 客户端升级并更新 `protocol/VERSION`
 - 不得在本仓库复制协议正文，避免两份不一致
 
+## 致谢
+
+- **`Pal-AI-Lab/Coopanion`** —— 形象资产、透明宿主与 `followCursor` 跨屏跟随思路（AGPL-3.0，详见 [THIRD-PARTY-NOTICE.md](THIRD-PARTY-NOTICE.md)）。
+- **`Bai-Cute/big-blue-fish-desktop-pet`**、**`shenliuyu18/dafeiyu-pet`** —— WPF / Wails 透明窗口与像素级命中思路参考，未复制代码。
+- **`YVFENGXS/Jinyv-memory`** —— 记忆核心、`desktop-v1` 协议与服务端 AI（MIT）。
+- **Electron** —— 透明窗口运行时（MIT）。
+
+完整的第三方素材、许可与署名见 [THIRD-PARTY-NOTICE.md](THIRD-PARTY-NOTICE.md)。
+
 ## 许可
 
 本仓库因引入 `Pal-AI-Lab/Coopanion` 的代码与形象资产，整体采用 **GNU AGPL-3.0-or-later**（含 Coopanion 的 section 7 附加许可），见 [LICENSE](LICENSE) 与 [THIRD-PARTY-NOTICE.md](THIRD-PARTY-NOTICE.md)。
